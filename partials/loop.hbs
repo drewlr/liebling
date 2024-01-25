@@ -4,7 +4,7 @@
   {{#is "post"}}
     <div class="m-recommended-slider__item swiper-slide">
   {{/is}}
-  <article class="m-article-card {{#unless feature_image}}no-picture{{/unless}} {{post_class}}">
+  <article class="m-article-card {{#unless feature_image}}no-picture{{/unless}} {{post_class}} {{#is "home"}}{{#if featured}}{{#has index="0, 1, 2, 3, 4"}}hide-card{{/has}}{{/if}}{{/is}}">
     <div class="m-article-card__picture">
       <a href="{{url}}" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
       {{#if feature_image}}
