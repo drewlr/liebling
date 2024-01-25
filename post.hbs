@@ -43,7 +43,7 @@ into the {body} of the default.hbs template --}}
       {{!-- Everything inside the #post tags pulls data from the post --}}
       {{#post}}
         <div class="l-wrapper in-post {{#unless feature_image}}no-image{{/unless}} js-aos-wrapper" data-aos="fade-up"
-          data-aos-delay="300">
+          data-aos-delay="100">
           <div
             class="l-post-content js-progress-content">
             <header class="m-heading">
@@ -179,6 +179,7 @@ into the {body} of the default.hbs template --}}
             </div>
           </section>
         --}}
+        
       {{/post}}
       {{!-- Related posts --}}
       {{#if post.tags.length}}

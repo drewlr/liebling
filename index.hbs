@@ -40,8 +40,16 @@ into the {body} of the default.hbs template --}}
     {{/if}}
   </div>
   </section>
+  {{!-- ALR: added this line to add breakline after image for small screens. Goes with CSS code
+      @media (min-width: 770px) {
+     .hidden-ss {
+    display: none !important;
+      visibility: hidden !important;
+       }
+    }--}}
+  <br class="hidden-ss">
   <div class="l-content">
-    <div class="l-wrapper" data-aos="fade-up" data-aos-delay="300">
+    <div class="l-wrapper" data-aos="fade-up" data-aos-delay="100">
       <div class="l-grid centered">
         {{#get "posts" filter="featured:true" include="authors,tags" limit="5" as |featured|}}
           {{#if featured}}
@@ -73,9 +81,10 @@ into the {body} of the default.hbs template --}}
                             <div style="background-image: url({{asset "images/default-avatar-square-small.jpg"}});"></div>
                           {{/if}}
                         </a>
+                         {{!-- ALR: commenting this out to remove tags from appearing in featured posts in home page
                         {{#if primary_tag}}
                           <a href="{{primary_tag.url}}" class="m-featured-article__tag">{{primary_tag.name}}</a>
-                        {{/if}}
+                        {{/if}} --}}
                       </div>
                       <div class="m-featured-article__ribbon">
                         <span class="icon-star"></span>
